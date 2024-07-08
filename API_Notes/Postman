@@ -1,0 +1,201 @@
+Postman : Manual API testing
+RestAssure: Automation testing
+
+Postman
+Workspace: Used to maintain files/script
+Create new workspace >>>
+Create collections (Contains no of folders and http requits) >>>
+
+Create response under
+GET >>> Retrieve the resource from database
+POST >>> Create resource on database
+PUT >>> Update existing resource on database
+DELETE >>> Delete existing resource from database
+PATCH >>> Update Partial details resource on database
+
+GET === https://reqres.in/api/users?page=2
+
+Validations
+status code
+time
+size data
+respond body
+cookies
+headers
+
+================================================================================================================
+
+POST === https://reqres.in/api/users
+select 'body' option then 'raw' option >>> select Json text
+
+Requist:
+{
+    "Neme": "DOn",
+    "Job": "Trainee"
+}
+
+Got responce === 201 Created
+
+{
+    "Neme": "DOn",
+    "Job": "Trainee",
+    "id": "738",
+    "createdAt": "2023-01-14T16:46:25.593Z"
+}
+
+=================================================================================================================
+
+PUT === https://reqres.in/api/users/738 === 738 is id respond from Post
+select 'body' otion then 'raw' option >>> select Json text
+send text ===
+Requist:
+{
+    "Neme": "Boss",
+    "Job": "Trainee"
+}
+
+Got responce === 200 OK
+{
+    "Neme": "Boss",
+    "Job": "Trainee",
+    "updatedAt": "2023-01-14T16:51:06.608Z"
+}
+
+=================================================================================================================
+
+DELETE === https://reqres.in/api/users/738
+Click send
+
+Got responce == 204 No Content
+
+=========================================================
+
+Create Dummy API
+
+Needed software's
+
+1. NodeJS
+2. npm
+3. Json-server
+
+>>> Create student.json file with data
+>>> run cmd "C:\Users\srikanth\Desktop\IT\API>json-server student.json"
+>>> http://localhost:3000/Student_Data
+
+
+
+=========================================
+API Response Validations (Adding tests)
+
+1. Status code
+2. Headers
+3. Cookies
+4. Response time
+5. Response body
+
+
+Chain framework: Contain certain number of framework.
+
+pm is the object that contains the script that’s running in the Postman sandbox. It allows you to get request context and response context as well once the request is executed.
+
+Please follow the below steps to write the HTTP Status code verification assertion.
+
+1) We will be using a sample hosted API for writing our assertion. Here is the sample endpoint against which we will write tests and add assertions.
+
+2) Open Postman and create a GET request for the above URL.
+
+3) Once the request is configured, try clicking “Send” to ensure that the request is correctly set up and you are getting some response.
+
+4) Now, let’s try adding a test to this request. The first one will be to just check whether the requests return an HTTP 200 OK Status code. For that we can use Postman’s easy templates to validate, else we can simply type-in as below.
+
+5) Once the test is added, let’s try to execute this request again, and see the results of the test. Open the “Tests” tab in the response section and see the test/assertion validation message.
+
+==========
+TEST
+
+For expect single response
+
+pm.test("Status code is 200", function () {
+pm.response.to.have.status(200);
+});
+
+If expect one of the response
+
+pm.test("Status code is 200", function () {
+pm.expect(pm.response.code).to.be.oneOf([200,201,202]);
+});
+==========
+
+pm.test() is a closure function that allows you to write tests for a Postman request that’s being executed.
+pm.response.to.have.status(200) is the actual assertion that is trying to validate the response to have a status code of 200.
+pm.expect() as a generic assertion library we can make use of chai Java script library assertions.
+
+
+HEADER
+
+pm.test("Contenyt type header App/Json", function () {
+pm.response.to.have.header("Content-Type");
+});
+
+COOKIE
+pm.test("Cookie language is present", function () {
+pm.expect(pm.cookies.get("language").to.eql('en-gb');
+});
+
+
+RESPONCE TIME
+
+Below rime
+
+pm.test("Responce time is less than 400 ms", function () {
+pm.expect(pm.response.responseTime).to.be.below(400);
+});
+
+Above time
+pm.test("Responce time is less than 50 ms", function () {
+pm.expect(pm.response.responseTime).to.be.above(50);
+});
+
+
+RESPONCE DATA
+
+const jsonData = pm.response.json();
+pm.test("Test data type of JSON", function () {
+pm.expect(jsonData).to.be.an("object");
+pm.expect(jsonData.id).to.be.a("number");
+pm.expect(jsonData.Nmae).to.be.a("string");
+});
+
+==========================================================================
+
+PRE-REQUEST SCRIPTS
+
+Pre-request scripts are logic or piece of code that are guaranteed to execute before the request execution begins.
+It allows for adding dynamic behavior to request execution.
+
+EX: add Data-Type01 header
+
+pm.request.headers.add({
+key: 'Data-Type01',
+value: 'appn/json'
+});
+
+==========================================================================
+
+NEWMAN
+
+Export collections >> it will save as json format in respected folder >>> Rum cmd in that folder
+Command: "newman run C:\Users\srikanth\Desktop\IT\API\Student_Data.postman_collection.json"
+
+
+
+
+==============================================================================
+RESTASSURE
+
+
+=========Refference======
+https://www.softwaretestinghelp.com/api-testing-using-postman/
+
+
+

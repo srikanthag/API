@@ -1,0 +1,37 @@
+RestAssured
+RestAssured  is an AP/Library Through which we can automate RestAPIs.
+
+Pre-requites
+1. Java
+2. Eclipes
+3. TestNG
+4. Maven
+
+Dependencies:
+1. rest-assured
+2. json-path
+3. json
+4. gson
+5. testing
+6. scribejava-apis
+7. jason-scema validator
+8. xmal scema validator
+
+Note: Download dependencies from https://mvnrepository.com/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

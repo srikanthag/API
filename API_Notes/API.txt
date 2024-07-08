@@ -1,0 +1,71 @@
+API testing: API testing is a type of software testing that analyzes an application program interface (API) to verify it fulfills its
+expected functionality, security, performance and reliability
+
+
+
+Rest API:
+A REST (Representational State Transfer)  API (also known as RESTful API) is an application programming interface (API or web API)
+that conforms to the constraints of REST architectural style and allows for interaction with RESTful web services.
+
+Client: A client is a computer or host that sends the request for a specific service or data to a server through the HTTP protocol
+in the form of a URL and receives a response.
+
+Server: A server is a remote machine that accepts the request, processes it, and sends the response information through the
+HTTP/HTTPS protocol.
+
+Resource: A resource is any piece of information that the API can provide the client.
+
+Client-Server model: When we use AN Internet browser to access any web page/website, the client, in this case, is the computer running
+the browser software, which has requested a web page from a web server. The client and server exchange messages through the HTTP request and response protocol.
+
+Request and Response in REST API?
+Each URL is called a request while the data sent back to you is called a response.
+
+Types of API Methods
+
+1. GET: The GET method is used to extract information from the given server using a given URI. While using GET request,
+it should only extract data and should have no other effect on the data.
+
+2. POST: A POST request is used to create a new entity. It can also be used to send data to the server, for example, customer
+information, file upload, etc. using HTML forms.
+
+3. PUT: Create a new entity or update an existing one.
+
+4. DELETE: Removes all current representations of the target resource given by a URI.
+
+==============================================================================================================
+
+Client-Server Architecture:
+
+The client-server architecture refers to a system that hosts, delivers, and manages most of the resources and services that the client requests.
+
+The architecture involves a middleware used for interaction between the client and the server. Though it is expensive but is very easy
+to use. The middleware improves performance and flexibility. It stores the business and the data logic.
+The three layers in the 3-tier architecture are-
+
+Presentation Layer(Client tier)
+Application Layer(Business tier)
+Database Layer(Data tier)
+
+
+==================================================================================================================
+
+They are HTTP RESPONSE standard status code. Here are the most common ones
+200===OK==We received the request
+201 === Created===We received the request and created something. For example, we received a file upload request and a file is created.
+204===No content===Incorrect locale used
+300===The HTTP 300 Multiple Choices redirect status response code indicates that the request has more than one possible responses.
+400===Request error==Bad request===Incorrect parameters (input data)
+401===Unauthorized===Authentication error: invalid API key, miscalculated dev hash, etc. More details.
+500==Response===Error===Please report a bug to support@oneskyapp.com
+
+=============================================================
+
+
+
+
+
+
+
+
+
