@@ -1,0 +1,272 @@
+API Testing: API testing is a type of software testing that analyzes an application program interface (API) to verify it fulfills its expected functionality, security, performance and reliability
+
+
+Rest API:
+A REST (Representational State Transfer)  API (also known as RESTful API) is an application programming interface (API or web API) that conforms to the constraints of REST architectural style and allows for interaction with RESTful web services.
+
+Client: A client is a computer or host that sends the request for a specific service or data to a server through the HTTP protocol in the form of a URL and receives a response.
+
+Server: A server is a remote machine that accepts the request, processes it, and sends the response information through the HTTP/HTTPS protocol.
+
+Resource: A resource is any piece of information that the API can provide the client.
+
+Client-Server model: When we use AN Internet browser to access any web page/website, the client, in this case, is the computer running the browser software, which has requested a web page from a web server. The client and server exchange messages through the HTTP request and response protocol.
+
+Request and Response in REST API?
+Each URL is called a request while the data sent back to you is called a response.
+
+Types of API Methods
+
+1. GET: The GET method is used to extract information from the given server using a given URI. While using GET request, it should only extract data and should have no other effect on the data.
+2. POST: A POST request is used to create a new entity. It can also be used to send data to the server, for example, customer information, file upload, etc. using HTML forms.
+3. PUT: Create a new entity or update an existing one.
+4. DELETE: Removes all current representations of the target resource given by a URI.
+
+
+Client-Server Architecture:
+
+The client-server architecture refers to a system that hosts, delivers, and manages most of the resources and services that the client requests.
+
+The architecture involves a middleware used for interaction between the client and the server. Though it is expensive but is very easy to use. The middleware improves performance and flexibility. It stores the business and the data logic. The three layers in the 3-tier architecture are-
+
+Presentation Layer(Client tier)
+Application Layer(Business tier)
+Database Layer(Data tier)
+
+They are HTTP RESPONSE standard status code. Here are the most common ones
+* 200===OK==We received the request
+* 201 === Created===We received the request and created something. For example, we received a file upload request and a file is created.
+* 204===No content===Incorrect locale used
+* 300===The HTTP 300 Multiple Choices redirect status response code indicates that the request has more than one possible responses.
+* 400===Request error==Bad request===Incorrect parameters (input data)
+* 401===Unauthorized===Authentication error: invalid API key, miscalculated dev hash, etc. More details.
+* 500==Response===Error===Please report a bug to support@oneskyapp.com
+
+===============================================
+
+Postman : Manual API testing
+RestAssure: Automation testing
+
+********* POSTMAN ******************
+
+Workspace: Used to maintain files/script
+Create new workspace >>> 
+Create collections (Contains no of folders and http requits) >>> 
+
+Create response under
+GET >>> Retrieve the resource from database
+POST >>> Create resource on database
+PUT >>> Update existing resource on database
+DELETE >>> Delete existing resource from database
+PATCH >>> Update Partial details resource on database
+
+GET === https://reqres.in/api/users?page=2
+
+Validations
+status code
+time
+size data
+respond body
+cookies
+headers
+
+POST === https://reqres.in/api/users
+select 'body' option then 'raw' option >>> select Json text
+
+Request:
+{
+    "Neme": "DOn",
+    "Job": "Trainee"
+} 
+
+Got response === 201 Created
+
+{
+    "Name": "DOn",
+    "Job": "Trainee",
+    "id": "738",
+    "createdAt": "2023-01-14T16:46:25.593Z"
+}
+
+
+PUT === https://reqres.in/api/users/738 === 738 is id respond from Post
+select 'body' otion then 'raw' option >>> select Json text
+send text === 
+Request:
+{
+    "Name": "Boss",
+    "Job": "Trainee"
+} 
+
+Got response === 200 OK
+{
+    "Name": "Boss",
+    "Job": "Trainee",
+    "updatedAt": "2023-01-14T16:51:06.608Z"
+}
+
+DELETE === https://reqres.in/api/users/738
+Click send
+
+Got response == 204 No Content
+
+=========================================================
+
+Create Dummy API
+
+Needed software's
+
+1. NodeJS 
+2. npm
+3. Json-server
+
+>>> Create student.json file with data
+>>> run cmd "C:\Users\srikanth\Desktop\IT\API>json-server student.json"
+>>> http://localhost:3000/Student_Data
+
+===========================================================================================================
+API Response Validations (Adding tests)
+
+1. Status code
+2. Headers
+3. Cookies
+4. Response time
+5. Response body
+
+
+Chain framework: Contain certain number of framework. 
+
+pm is the object that contains the script that’s running in the Postman sandbox. It allows you to get request context and response context as well once the request is executed.
+
+Please follow the below steps to write the HTTP Status code verification assertion.
+
+1) We will be using a sample hosted API for writing our assertion. Here is the sample endpoint against which we will write tests and add assertions.
+
+2) Open Postman and create a GET request for the above URL.
+
+3) Once the request is configured, try clicking “Send” to ensure that the request is correctly set up and you are getting some response.
+
+4) Now, let’s try adding a test to this request. The first one will be to just check whether the requests return an HTTP 200 OK Status code. For that we can use Postman’s easy templates to validate, else we can simply type-in as below.
+
+5) Once the test is added, let’s try to execute this request again, and see the results of the test. Open the “Tests” tab in the response section and see the test/assertion validation message.
+
+=========================================================================================================
+TEST
+
+For expect single responce
+
+pm.test("Status code is 200", function () {
+pm.response.to.have.status(200);
+});
+
+If expect one of the responce
+
+pm.test("Status code is 200", function () {
+pm.expect(pm.response.code).to.be.oneOf([200,201,202]);
+});
+==========
+
+pm.test() is a closure function that allows you to write tests for a Postman request that’s being executed. 
+pm.response.to.have.status(200) is the actual assertion that is trying to validate the response to have a status code of 200.
+pm.expect() as a generic assertion library we can make use of chai Java script library assertions.
+
+
+HEADER
+
+pm.test("Contenyt type header App/Json", function () {
+pm.response.to.have.header("Content-Type");
+});
+
+COOKIE
+pm.test("Cookie language is present", function () {
+pm.expect(pm.cookies.get("language").to.eql('en-gb');
+});
+
+
+RESPONCE TIME
+
+Below rime
+
+pm.test("Responce time is less than 400 ms", function () {
+pm.expect(pm.response.responseTime).to.be.below(400);
+});
+
+Above time
+pm.test("Responce time is less than 50 ms", function () {
+pm.expect(pm.response.responseTime).to.be.above(50);
+});
+
+
+RESPONCE DATA
+
+const jsonData = pm.response.json();
+pm.test("Test data type of JSON", function () {
+pm.expect(jsonData).to.be.an("object");
+pm.expect(jsonData.id).to.be.a("number");
+pm.expect(jsonData.Nmae).to.be.a("string");
+});
+
+==========================================================================
+
+PRE-REQUEST SCRIPTS
+
+Pre-request scripts are logic or piece of code that are guaranteed to execute before the request execution begins. It allows for adding dynamic behavior to request execution.
+
+EX: add Data-Type01 header
+
+pm.request.headers.add({
+key: 'Data-Type01',
+value: 'appn/json'
+});
+
+==========================================================================
+
+NEWMAN
+
+Export collections >> it will save as json format in respected folder >>> Rum cmd in that folder 
+Commanad: "newman run C:\Users\srikanth\Desktop\IT\API\Student_Data.postman_collection.json"
+
+
+
+
+==============================================================================
+RESTASSURE
+
+
+=========Refference======
+https://www.softwaretestinghelp.com/api-testing-using-postman/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,10 @@
+Website: https://reqres.in/
+Here we will get fet free API
+
+
+Server responses
+
+200 for get response
+204 for delete successfully
+201 post request success
+
