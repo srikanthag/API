@@ -1,0 +1,135 @@
+Jmeter
+JMeter also known as 'Apache JMeter' is an open source, 100% java based application with a graphical interface. It is designed to analyse and
+measure the performance and load functional behaviour of web application and variety of services.
+
+
+
+*  JMeter Features  *
+1. Open source application: JMeter is a free open source application which facilitatesusers or developers to use thesource code for
+development of other applications.
+2. Platform independent: JMeter is written and developed using java, so it can run on any environment / workstation that accepts a Java virtual machine,
+for example - Windows, Linux, Mac, etc.
+3. Support various server types: JMeter is highly extensible and capable to load the performance test in different server types:
+Web: HTTP, HTTPS, SOAP,
+Database: JDBC, LDAP, JMS, and
+Mail: POP3.
+
+
+* Jmeter Element *
+The  different component of jmeter is called "Jmeter element" and each element specifies for specific function
+
+1.  Test Plan
+A test plan can be visualized as your JMeter script for running tests. A test plan consists of test elements such as thread groups,
+logic controllers, sample-generating controllers, listeners, timers, assertions, and configuration elements.
+
+2. Thread group
+Collection of threads
+Each thread stimulate one real user request to the server
+
+" Feature of  each thread group ""
+Number of threads (the number of users you are testing).
+Ramp-up time (how much time you want to allow the Thread Group to go from 0 to 3 users).
+Loop count (How many times the test should be looped).
+
+3. Controllers
+2 types Samplers and logical controllers
+
+a. Samplers
+Samplers are the components which allow JMeter to send specific types of requests to a server.It simulates a user's request for a
+page to the target server.
+
+Samplers are a must to add component to a test plan as only it can let JMeter know what type of request need to go to a server.
+Requests could be HTTP, HTTP(s), FTP, TCP, SMTP, SOAP etc
+
+b. Logical Controllers
+Logic Controllers help you to control the flow the order of processing of samplers in a thread. It can also change the order of requests
+coming from their child elements.
+
+
+4. Listeners
+Listener will show the results of test execution
+The the result in the form of tables, graphs, trees or simple text in some log file.
+
+
+5. Configuration Elements
+Working of configuration elements is quite similar to those of samplers.However, it does not send requests but it allows you to
+modify the requests made by the samplers.
+
+It is a simple element where you can collect the corporate configuration values of all samplers like webserver's hostname or database
+url etc.
+
+6. Timers
+When you perform any operation on a website or app, they naturally have pauses and delays. These can be simulated with Timers.
+
+JMeter sends requests without applying any delay between each sampler/request. If you perform load/stress testing on your server
+without any delay, it will be overloaded. This not exactly what you want. You can add a timer element which will permit you to define
+a period to wait between each request.
+
+Constant Timer:
+This timer introduces a constant pause between each sampler.
+Use cases: When you want to simulate a constant delay between each request, regardless of the load or response times.
+Gaussian Random Timer:
+This timer adds a delay that follows a Gaussian distribution (also known as normal distribution) around a specified mean with a given deviation.
+Use cases: When you want to simulate a more realistic distribution of user think times or delays between requests.
+Uniform Random Timer:
+This timer adds a delay that follows a uniform distribution between a specified minimum and maximum value.
+Use cases: When you want to simulate a random delay between requests within a specified range.
+Poisson Random Timer:
+This timer adds delays that follow a Poisson distribution with a specified mean delay time.
+Use cases: When you want to simulate random, but more frequent, delays between requests, such as in scenarios with bursty traffic.
+Synchronizing Timer:
+This timer allows you to synchronize a group of threads to start their requests at precisely the same time.
+Use cases: When you need to simulate concurrent user behavior, such as multiple users submitting a form simultaneously.
+Constant Throughput Timer:
+This timer adjusts the delay between each request to achieve a target throughput (requests per minute).
+Use cases: When you want to maintain a constant load on the server, regardless of the number of concurrent users.
+Precise Throughput Timer:
+This timer allows you to precisely control the throughput of your test by specifying the desired number of requests per minute.
+Use cases: When you need fine-grained control over the throughput of your test to accurately simulate real-world scenarios.
+
+""" Create first test plan """
+1. Start jmeter
+2. Create testplan
+3. Create thread group
+4. Add sampler
+5. Add listener
+6. Run test plan
+7. Save test plan
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

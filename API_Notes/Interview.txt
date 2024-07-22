@@ -1,0 +1,90 @@
+1. What is API testing ?
+API testing involves testing the APIs (Application Programming Interfaces) directly, including their functionality, reliability, performance, and security.
+
+2. What are the types of API testing you are familiar with ?
+Types include:
+Unit Testing: Testing individual API methods/functions.
+Integration Testing: Testing interactions between different API modules.
+End-to-End Testing: Testing a complete flow of APIs as they would be used in a real-world scenario.
+Load Testing: Testing APIs under expected load conditions.
+Security Testing: Ensuring APIs are secure against unauthorized access or attacks.
+
+3. How do you validate API responses ?
+Validate using assertions based on:
+Response status codes (e.g., 200 OK, 404 Not Found).
+Response payload (JSON/XML) for expected data and structure.
+Headers (e.g., Content-Type, Cache-Control) for correct values.
+Performance metrics (response time, latency).
+
+4. What tools have you used for API testing?
+Mention tools like Postman, SoapUI, REST Assured (for Java), JMeter (for load testing), etc. Discuss any scripting languages used for testing APIs.
+
+5. How do you handle authentication in API testing?
+Explain methods such as basic authentication, OAuth tokens, API keys, JWT (JSON Web Tokens), and how you integrate these into API tests.
+
+6. 10. Mention common HTTP methods used in API testing.
+Common HTTP methods used in API testing are:
+GET: Used to retrieve data or resources from an API.
+POST: Used to create new data or resources on an API.
+PUT: Used to update existing data or resources on an API.
+DELETE: Used to delete data or resources from an API.
+PATCH: Used to update existing data or resources on an API partially.
+
+7. What is the purpose of HTTP status codes in API testing?
+The purpose of HTTP status codes in API testing is to indicate the outcome of an API request. Status codes are three-digit numbers included in the response message from the server to provide information about the result of the request.
+
+8. What is the role of headers in API testing?
+Headers in API testing play a significant role in controlling and managing the behavior of API requests and responses.
+
+9. What is JSON, and why is it commonly used in API testing?
+JSON stands for JavaScript Object Notation, and is a lightweight data-interchange format that is commonly used in API testing. JSON is commonly used in RESTful APIs since it enables efficient data serialization and deserialization, making it ideal for API testing.
+
+10. What is XML, and when is it used in API testing?
+XML, which stands for Extensible Markup Language, defines the set of rules for encoding documents in a format that is readable by both humans and machines. XML is used in API testing when APIs require data exchange in XML format.
+
+11. What is the purpose of authentication in API testing?
+The purpose of authentication in API testing is to verify the identity of the requester before granting access to protected resources.
+
+12. How do you perform load testing on APIs?
+Load testing on APIs can be performed by simulating a large number of concurrent users or requests to the API endpoint using load testing tools or frameworks.
+
+13. How do you ensure the security of APIs in your tests?
+Some best practices to ensure the security of APIs in your test include:
+a. Input validation: Ensure that all input data in API requests are properly validated and sanitized to prevent injection attacks.
+b. Authentication and authorization: Properly implement and validate authentication and authorization mechanisms to ensure that only authorized users can access the API endpoints and perform authorized actions.
+c. Secure communications: Use secure communication protocols, such as HTTPS, to encrypt data transmitted between the client and server.
+
+14. What is API performance testing, and why is it important?
+API performance testing is important to measure the response time, throughput, and resource utilization of APIs. It can be performed using tools like JMeter, LoadRunner, or Gatling.
+
+15. What is Postman?
+Postman is a collaboration platform for API development. It allows users to design, mock, test, document, monitor, and publish APIs.
+
+16. How do you create a request in Postman?
+
+Open Postman and create a new request.
+Enter the request URL.
+Choose the HTTP method (GET, POST, PUT, DELETE, etc.).
+Add headers, parameters, and body content as needed.
+Send the request and inspect the response.
+
+17. What are environments and variables in Postman?
+Environments in Postman allow you to customize requests using different sets of variables (e.g., URLs, API keys) for different environments (e.g., development, testing, production).
+
+18. How do you handle authentication in Postman?
+Postman supports various authentication methods such as basic authentication, OAuth, API key, and bearer tokens. You can configure these in the Authorization tab of a request.
+
+19. What are collections in Postman?
+Collections in Postman are groups of saved requests. They allow you to organize and run multiple requests together, facilitating testing workflows.
+
+20. How do you handle file uploads in Postman?
+You can send files as part of a request by selecting the appropriate body type (e.g., form-data or binary) and attaching the file.
+
+21. What is the purpose of Newman in Postman?
+Newman is a command-line collection runner for Postman. It allows you to run Postman collections directly from the command line interface (CLI), making it easier to integrate with CI/CD pipelines.
+
+22. How do you handle dynamic data in Postman tests?
+Dynamic data can be handled using environment variables, global variables, and script-based dynamic data extraction from responses.
+
+
+

@@ -61,11 +61,6 @@ They are HTTP RESPONSE standard status code. Here are the most common ones
 
 =============================================================
 
-
-
-
-
-
-
-
+Barer token
+Bearer Token. A security token with the property that any party in possession of the token (a "bearer") can use the token in any way that any other party in possession of it can.
 
