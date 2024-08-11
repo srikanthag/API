@@ -1,28 +1,258 @@
-1. What is API testing ?
-API testing involves testing the APIs (Application Programming Interfaces) directly, including their functionality, reliability, performance, and security.
+1. What is an API?
+An API (Application Programming Interface) is a software intermediary that enables two applications to communicate with each other. It comprises a number of subroutine definitions, logs, and tools for creating application software.
 
-2. What are the types of API testing you are familiar with ?
-Types include:
-Unit Testing: Testing individual API methods/functions.
-Integration Testing: Testing interactions between different API modules.
-End-to-End Testing: Testing a complete flow of APIs as they would be used in a real-world scenario.
-Load Testing: Testing APIs under expected load conditions.
-Security Testing: Ensuring APIs are secure against unauthorized access or attacks.
+In an API testing interview, you could be asked to give some API examples, here
+are the well-known ones: Google Maps API, Amazon Advertising API, Twitter
+API, YouTube API, etc
 
-3. How do you validate API responses ?
+2. What is Web Service?
+Web services can be generally regarded as functions or functionality of applications or systems exposed over the Web using standardised message formats and typically interfaced to other software using traditional APIs,
+
+3. What are main differences between API and Web Service?
+* A Web service uses only three styles of use: SOAP, REST and XML-RPC for
+communication whereas API may be exposed to in multiple ways.
+* A Web service always needs a network to operate while APIs don’t need a
+network for operation.
+
+4. What are the Limits of API Usage?
+* Many APIs have a certain limit set up by the provider. Thus, try to estimate your usage and understand how that will impact the overall cost of the offering.
+* Whether this will be a problem depends in large part on how data is leveraged.
+* Getting caught by a quota and effectively cut-off because of budget limitations will render the service (and any system or process depending on it) virtually useless.
+
+5. What are some architectural styles for creating a Web API?
+This is one of the fundamental Web API interview questions. Bellows are four
+common Web API architectural styles:
+• HTTP for client-server communication
+• XML/JSON as formatting language
+• Simple URI as the address for the services
+• Stateless communication
+
+6. Who can use a Web API?
+Web API can be consumed by any clients which support HTTP verbs such as GET, PUT, DELETE, POST. Since Web API services do not require configuration, they can be easily used by any client. In fact, even portable devices such as mobile devices can easily use Web API, which is undoubtedly the biggest advantage of this technology.
+
+7. What is API Testing?
+API testing is a kind of software testing that determines if the developed APIs
+meet expectations regarding the functionality, reliability, performance, and
+security of the application
+
+8. What are the advantages of API Testing?
+In an API interview, they are likely to ask about the advantages of API testing. So be prepared with the significant ones such as:
+• Test for Core Functionality: API testing provides access to the application without a user interface. The core and code-level of functionalities of the application will be tested and evaluated early before the GUI tests. This will help
+detect the minor issues which can become bigger during the GUI testing.
+• Time Effective: API testing usually is less time-consuming than functional GUI testing. The web elements in GUI testing must be polled, which makes the testing process slower. Particularly, API test automation requires less code so it can
+provide better and faster test coverage compared to GUI test automation. These will result in the cost saving for the testing project.
+• Language-Independent: In API testing, data is exchanged using XML or JSON. These transfer modes are complete language-independent, allowing users to select any code language when adopting automation testing services for the project.
+• Easy Integration with GUI: API tests enable highly integrable tests, which is particularly useful if you want to perform functional GUI tests after API testing. For instance, simple integration would allow new user accounts to be created within the application before a GUI test started.
+
+9. Some common protocols used in API testing?
+Many protocols are now available to be used in API testing, such as JMS, REST, HTTP, UDDI and SOAP.
+
+10. What is the test environment of API?
+When the installation process is complete, API is verified for the proper operation. Throughout the process, the API called from the original environment is set up with different parameters to study the test results
+
+11. What are principles of an API test design?
+The five most important principles of an API test design are:
+• Setup: Create objects, start services, initialize data, etc
+• Execution: Steps to apply API or the scenario, including logging
+• Verification: Oracles to evaluate the result of the execution
+• Reporting: Pass, failed or blocked
+• Clean up: Pre-test state
+
+12. What are the common API testing types?
+While there are certainly specialty tests, and no list can be asked to be
+comprehensive in this realm, most tests fit broadly into these following nine
+categories that you should remember before attending in an API testing interview.
+• Validation Testing
+• Functional Testing
+• UI testing
+• Load testing
+• Runtime/ Error Detection
+• Security testing
+• Penetration testing
+• Fuzz testing
+• Interoperability and WS Compliance testing
+
+13. What is the procedure to perform API testing?
+• Choose the suite to add the API test case
+• Choose the test development mode
+• Demand the development of test cases for the required API methods
+• Configure the control parameters of the application and then test conditions
+• Configure method validation
+• Execute the API test
+• Check test reports and filter API test cases
+• Arrange all API test cases
+
+14. What must be checked when performing API testing?
+During the API testing process, a request is raised to the API with the known data.
+This way you can analyze the validation response. While testing an API, you should consider:
+• Accuracy of data
+• Schema validation
+• HTTP status codes
+• Data type, validations, order and completeness
+• Authorization checks
+• Implementation of response timeout
+• Error codes in case API returns, and
+• Non-functional testing like performance and security testing
+
+14. What is the best approach method to perform API testing?
+The following factors should be considered when performing API testing:
+• Defining the correct input parameters
+• Verifying the calls of the mixture of two or more added value parameters
+• Defining the basic functionality and scope of the API program
+• Writing appropriate API test cases and making use of testing techniques such as equivalence class, boundary value, etc. to check the operability
+• Testing case execution
+• Comparing the test result with the expected result
+• Verifying the API behavior under conditions such as connection to files and so
+on.
+
+15. What are tools could be used for API testing?
+There are myriad of different API testing tools available. A few of common tools are Katalon Studio, Postman, SoapUi Pro, Apigee, etc. While doing Unit and API testing, both targets source code. If an API method uses code based in .NET then another supporting tool must have .NET.
+
+16. What are differences between API Testing and UI Testing?
+• API enables communication between two separate software systems. A software system implementing an API contains functions or subroutines that can be executed by another software system.
+• On the other hand, UI ( User Interface) testing refers to testing graphical interface such as how users interact with the applications, testing application elements like fonts, images, layouts etc. UI testing basically focuses on look and feel of an
+application.
+
+17. What are major challenges faced in API testing?
+If you can overcome the challenges in API Testing, you can be confident in the
+API testing interview too. They are:
+• Parameter Selection
+• Parameter Combination
+• Call sequencing
+• Output verification and validation
+• Another important challenge is providing input values, which is very difficult as
+GUI is not available in this case
+
+18. What are the testing methods that come under API testing?
+One of the most common Web API testing interview questions is about the testing
+methods. They are:
+• Unit testing and Functional testing
+• Load testing to test the performance under load
+• Discovery testing to list, create and delete the number of calls documented in API
+• Usability and Reliability testing to get consistent results
+• Security and Penetration testing to validate all types of authentication
+• Automation testing to create and run scripts that require regular API calls
+• End to end Integration and Web UI testing
+• API documentation testing to determine its efficiency and effectiveness
+
+19. Why is API testing considered as the most suitable form for Automation testing?
+API testing is now preferred over GUI testing and is considered as most suitable because:
+• It verifies all the functional paths of the system under test very effectively.
+• It provides the most stable interface.
+• It is easier to maintain and provides fast feedback.
+
+20. What are common API errors that often founded?
+Not only API fundamental questions, the interviewer also determine your knowledge and experience by asking about the API errors in a Web API testing interview. So the most common ones are:
+• Missing module errors
+• Documentation errors
+• Parameter validation errors
+• And some standard error expectations as if the result is not so predicted then the occurrence of errors can be seen and for the same warnings are specified in the form of a message. There can be one or more warnings within an individual module.
+
+22. What kinds of bugs that API testing would often find?
+• Missing or duplicate functionality
+• Fails to handle error conditions gracefully
+• Stress
+• Reliability
+• Security
+• Unused flags
+• Not implemented errors
+• Inconsistent error handling
+• Performance
+• Multi-threading issues
+• Improper errors
+
+23. What is REST?
+REST (Representational State Transfer) is an architectural style for developing web services which exploit the ubiquity of HTTP protocol and uses HTTP method to define actions. It revolves around resource where every component being a resource that can be accessed through a shared interface using standard HTTP methods.
+
+In REST architecture, a REST Server provides access to resources and REST client accesses and makes these resources available. Here, each resource is identified by URIs or global IDs, and REST uses multiple ways to represent a resource, such as text, JSON, and XML. XML and JSON are nowadays the most popular representations of resources
+
+24. What is a RESTFul Web Services?
+Mostly, there are two kinds of Web Services which should be remembered in your next API testing interview:
+1. SOAP (Simple Object Access Protocol) – an XML-based method to expose web services.
+2. Web services developed in the REST style are referred to as RESTful web services. These web services use HTTP methods to implement the concept of REST architecture. A RESTful web service usually defines a URI Uniform Resource Identifier a service, provides resource representation like JSON and a set of HTTP methods.
+
+25. What is the most popular way to represent a resource in REST?
+REST uses different representations to define a resource like text, JSON, and XML.
+XML and JSON are the most popular representations of resources.
+
+26. Which protocol is used by RESTful Web services?
+RESTful web services use the HTTP protocol as a medium of communication between the client and the server.
+
+27. What are some key characteristics of REST?
+Key characteristics of REST are likely asked in a Web API Testing interview. So please get the answer ready in your mind with these 2 ones:
+• REST is stateless, therefore the SERVER has no status (or session data) With a well-applied REST API, the server could be restarted between two calls, since all data is transferred to the server
+• Web service uses POST method primarily to perform operations, while REST uses GET for accessing resources.
+
+28. What is messaging in RESTful Web services?
+RESTful web services use the HTTP protocol as a communication tool betwee the client and the server. The technique that when the client sends a message in the form of an HTTP Request, the server sends back the HTTP reply is called Messaging. These messages comprise message data and metadata, that is, information on the message itself
+
+29. What are the core components of an HTTP request?
+An HTTP request contains five key elements:
+1. An action showing HTTP methods like GET, PUT, POST, DELETE.
+2. Uniform Resource Identifier (URI), which is the identifier for the resource on the server.
+3. HTTP Version, which indicates HTTP version, for example-HTTP v1.1.
+4. Request Header, which carries metadata (as key-value pairs) for the HTTP Request message. Metadata could be a client (or browser) type, format supported by the client, format of a message body format, cache settings, and so on.
+5. Request Body, which indicates the message content or resource representation.
+
+30. What are the most commonly used HTTP methods supported by REST?
+• GET is only used to request data from a specified resource. Get requests can be cached and bookmarked. It remains in the browser history and haS length restrictions. GET requests should never be used when dealing with sensitive data.
+• POST is used to send data to a server to create/update a resource. POST requests are never cached and bookmarked and do not remain in the browser history.
+• PUT replaces all current representations of the target resource with the request payload.
+• DELETE removes the specified resource.
+• OPTIONS is used to describe the communication options for the target resource.
+• HEAD asks for a response identical to that of a GET request, but without the response body.
+
+31. Can GET request to be used instead of PUT to create a resource?
+The PUT or POST method should be used to create a resource. GET is only used
+to request data from a specified resource.
+
+32. Is there any difference between PUT and POST operations?
+PUT and POST operation are quite similar, except the terms of the result generated by them.
+PUT operation is idempotent, so you can cache the response while the responses to POST operation are not cacheable, and if you retry the request N times, you will end up having N resources with N different URIs created on server.
+In a Web API Testing interview, you should give a specific example for PUT and
+POST operations to make crystal clear to the interviewer. Below is an example:
+
+Scenario: Let’s say we are designing a network application. Let’s list down few
+URIs and their purpose to get to know when to use POST and when to use PUT operations.
+GET /device-management/devices : Get all devices
+POST /device-management/devices : Create a new device
+GET /device-management/devices/{id} : Get the device information identified by “id”
+PUT /device-management/devices/{id} : Update the device information identified by “id”
+DELETE /device-management/devices/{id} : Delete device by “id”
+
+33. Which purpose does the OPTIONS method serve for the RESTful Web services?
+The OPTIONS Method lists down all the operations of a web service supports. It creates read-only requests to the server.
+
+34. What is URI? What is the main purpose of REST-based web services and what is its format?
+URI stands for Uniform Resource Identifier. It is a string of characters designed for unambiguous identification of resources and extensibility via the URI scheme.
+The purpose of a URI is to locate a resource(s) on the server hosting of the web service.
+A URI’s format is <protocol>://<servicename>/<ResourceType>/<ResourceID>.
+
+35. What is payload in RESTFul Web services?
+The “payload” is the data you are interested in transporting. This is differentiated from the things that wrap the data for transport like the HTTP/S Request/Response headers, authentication, etc.
+
+36. What is the upper limit for a payload to pass in the POST method?
+<GET> appends data to the service URL. But, its size shouldn’t exceed the maximum URL length. However, <POST> doesn’t have any such limit.
+So, theoretically, a user can pass unlimited data as the payload to POST method.
+But, if we consider a real use case, then sending POST with large payload will consume more bandwidth. It’ll take more time and present performance challenges to your server. Hence, a user should take action accordingly.
+
+37. What are SOAP Web services?
+This is one of the fundamental Web services testing questions that you must know the answer. The SOAP (Simple Object Access Protocol) is defined as an XMLbased protocol. It is known for designing and developing web services as well enabling communication between applications developed on different platforms using various programming languages over the Internet. It is both platform and language independent
+
+38. How do you validate API responses ?
 Validate using assertions based on:
 Response status codes (e.g., 200 OK, 404 Not Found).
 Response payload (JSON/XML) for expected data and structure.
 Headers (e.g., Content-Type, Cache-Control) for correct values.
 Performance metrics (response time, latency).
 
-4. What tools have you used for API testing?
+39. What tools have you used for API testing?
 Mention tools like Postman, SoapUI, REST Assured (for Java), JMeter (for load testing), etc. Discuss any scripting languages used for testing APIs.
 
-5. How do you handle authentication in API testing?
+40. How do you handle authentication in API testing?
 Explain methods such as basic authentication, OAuth tokens, API keys, JWT (JSON Web Tokens), and how you integrate these into API tests.
 
-6. 10. Mention common HTTP methods used in API testing.
+41. Mention common HTTP methods used in API testing.
 Common HTTP methods used in API testing are:
 GET: Used to retrieve data or resources from an API.
 POST: Used to create new data or resources on an API.
@@ -30,61 +260,58 @@ PUT: Used to update existing data or resources on an API.
 DELETE: Used to delete data or resources from an API.
 PATCH: Used to update existing data or resources on an API partially.
 
-7. What is the purpose of HTTP status codes in API testing?
+42. What is the purpose of HTTP status codes in API testing?
 The purpose of HTTP status codes in API testing is to indicate the outcome of an API request. Status codes are three-digit numbers included in the response message from the server to provide information about the result of the request.
 
-8. What is the role of headers in API testing?
+43. What is the role of headers in API testing?
 Headers in API testing play a significant role in controlling and managing the behavior of API requests and responses.
 
-9. What is JSON, and why is it commonly used in API testing?
+44. What is JSON, and why is it commonly used in API testing?
 JSON stands for JavaScript Object Notation, and is a lightweight data-interchange format that is commonly used in API testing. JSON is commonly used in RESTful APIs since it enables efficient data serialization and deserialization, making it ideal for API testing.
 
-10. What is XML, and when is it used in API testing?
+45. What is XML, and when is it used in API testing?
 XML, which stands for Extensible Markup Language, defines the set of rules for encoding documents in a format that is readable by both humans and machines. XML is used in API testing when APIs require data exchange in XML format.
 
-11. What is the purpose of authentication in API testing?
+46. What is the purpose of authentication in API testing?
 The purpose of authentication in API testing is to verify the identity of the requester before granting access to protected resources.
 
-12. How do you perform load testing on APIs?
+47. How do you perform load testing on APIs?
 Load testing on APIs can be performed by simulating a large number of concurrent users or requests to the API endpoint using load testing tools or frameworks.
 
-13. How do you ensure the security of APIs in your tests?
+48. How do you ensure the security of APIs in your tests?
 Some best practices to ensure the security of APIs in your test include:
 a. Input validation: Ensure that all input data in API requests are properly validated and sanitized to prevent injection attacks.
 b. Authentication and authorization: Properly implement and validate authentication and authorization mechanisms to ensure that only authorized users can access the API endpoints and perform authorized actions.
 c. Secure communications: Use secure communication protocols, such as HTTPS, to encrypt data transmitted between the client and server.
 
-14. What is API performance testing, and why is it important?
+49. What is API performance testing, and why is it important?
 API performance testing is important to measure the response time, throughput, and resource utilization of APIs. It can be performed using tools like JMeter, LoadRunner, or Gatling.
 
-15. What is Postman?
+50. What is Postman?
 Postman is a collaboration platform for API development. It allows users to design, mock, test, document, monitor, and publish APIs.
 
-16. How do you create a request in Postman?
-
+51. How do you create a request in Postman?
 Open Postman and create a new request.
 Enter the request URL.
 Choose the HTTP method (GET, POST, PUT, DELETE, etc.).
 Add headers, parameters, and body content as needed.
 Send the request and inspect the response.
 
-17. What are environments and variables in Postman?
+52. What are environments and variables in Postman?
 Environments in Postman allow you to customize requests using different sets of variables (e.g., URLs, API keys) for different environments (e.g., development, testing, production).
 
-18. How do you handle authentication in Postman?
+53. How do you handle authentication in Postman?
 Postman supports various authentication methods such as basic authentication, OAuth, API key, and bearer tokens. You can configure these in the Authorization tab of a request.
 
-19. What are collections in Postman?
+54. What are collections in Postman?
 Collections in Postman are groups of saved requests. They allow you to organize and run multiple requests together, facilitating testing workflows.
 
-20. How do you handle file uploads in Postman?
+55. How do you handle file uploads in Postman?
 You can send files as part of a request by selecting the appropriate body type (e.g., form-data or binary) and attaching the file.
 
-21. What is the purpose of Newman in Postman?
+56. What is the purpose of Newman in Postman?
 Newman is a command-line collection runner for Postman. It allows you to run Postman collections directly from the command line interface (CLI), making it easier to integrate with CI/CD pipelines.
 
-22. How do you handle dynamic data in Postman tests?
+57. How do you handle dynamic data in Postman tests?
 Dynamic data can be handled using environment variables, global variables, and script-based dynamic data extraction from responses.
-
-
 
