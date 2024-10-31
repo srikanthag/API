@@ -31,9 +31,3 @@ TC:001 Post request Test
     ${contents}     convert to string   ${contents}
     Should Not Be Empty      ${contents}
     log     ${contents}
-
-
-
-
-
-

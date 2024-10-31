@@ -227,46 +227,9 @@ Export collections >> it will save as json format in respected folder >>> Rum cm
 Commanad: "newman run C:\Users\srikanth\Desktop\IT\API\Student_Data.postman_collection.json"
 
 
-
-
 ==============================================================================
 RESTASSURE
 
 
 =========Refference======
 https://www.softwaretestinghelp.com/api-testing-using-postman/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

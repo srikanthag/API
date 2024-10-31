@@ -1,18 +1,14 @@
 1. What is an API?
 An API (Application Programming Interface) is a software intermediary that enables two applications to communicate with each other. It comprises a number of subroutine definitions, logs, and tools for creating application software.
 
-In an API testing interview, you could be asked to give some API examples, here
-are the well-known ones: Google Maps API, Amazon Advertising API, Twitter
-API, YouTube API, etc
+In an API testing interview, you could be asked to give some API examples, here are the well-known ones: Google Maps API, Amazon Advertising API, Twitter API, YouTube API, etc
 
 2. What is Web Service?
 Web services can be generally regarded as functions or functionality of applications or systems exposed over the Web using standardised message formats and typically interfaced to other software using traditional APIs,
 
 3. What are main differences between API and Web Service?
-* A Web service uses only three styles of use: SOAP, REST and XML-RPC for
-communication whereas API may be exposed to in multiple ways.
-* A Web service always needs a network to operate while APIs don’t need a
-network for operation.
+* A Web service uses only three styles of use: SOAP, REST and XML-RPC for communication whereas API may be exposed to in multiple ways.
+* A Web service always needs a network to operate while APIs don’t need a network for operation.
 
 4. What are the Limits of API Usage?
 * Many APIs have a certain limit set up by the provider. Thus, try to estimate your usage and understand how that will impact the overall cost of the offering.
@@ -20,8 +16,7 @@ network for operation.
 * Getting caught by a quota and effectively cut-off because of budget limitations will render the service (and any system or process depending on it) virtually useless.
 
 5. What are some architectural styles for creating a Web API?
-This is one of the fundamental Web API interview questions. Bellows are four
-common Web API architectural styles:
+This is one of the fundamental Web API interview questions. Bellows are four common Web API architectural styles:
 • HTTP for client-server communication
 • XML/JSON as formatting language
 • Simple URI as the address for the services
@@ -31,9 +26,7 @@ common Web API architectural styles:
 Web API can be consumed by any clients which support HTTP verbs such as GET, PUT, DELETE, POST. Since Web API services do not require configuration, they can be easily used by any client. In fact, even portable devices such as mobile devices can easily use Web API, which is undoubtedly the biggest advantage of this technology.
 
 7. What is API Testing?
-API testing is a kind of software testing that determines if the developed APIs
-meet expectations regarding the functionality, reliability, performance, and
-security of the application
+API testing is a kind of software testing that determines if the developed APIs meet expectations regarding the functionality, reliability, performance, and security of the application
 
 8. What are the advantages of API Testing?
 In an API interview, they are likely to ask about the advantages of API testing. So be prepared with the significant ones such as:
