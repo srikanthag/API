@@ -1,0 +1,10 @@
+A Postman Collection is a group of saved API requests that can be organized into folders and shared with others. It helps in managing, testing, and automating APIs efficiently.
+
+🔹 Key Features:
+Organized Requests: Group related API calls (GET, POST, PUT, DELETE, etc.) into folders.
+Environment Variables: Use variables for base URLs, tokens, etc., for easy switching between environments.
+Tests and Scripts: Add pre-request scripts and test scripts using JavaScript.
+Automation: Run collections using Collection Runner or Newman (command-line tool).
+Sharing and Collaboration: Share collections via links or export/import as JSON.
+Documentation: Generate and publish API documentation automatically from a collection.
+
