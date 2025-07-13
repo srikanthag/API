@@ -97,39 +97,3 @@ Use cases: When you need fine-grained control over the throughput of your test t
 7. Save test plan
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

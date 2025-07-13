@@ -1,0 +1,48 @@
+Postman POST Method Overview
+
+POST is an HTTP method used to send data to a server to create/update a resource. In Postman, the POST method is typically used for:
+
+* Creating new resources (e.g., users, items)
+* Submitting form data
+* Uploading files
+
+In Postman:
+
+1. Select POST from the dropdown next to the request URL.
+2. Go to the Body tab and select raw (or form-data) to enter the request payload.
+3. Set appropriate headers, like Content-Type: application/json.
+
+
+
+✅ Common POST Response Codes
+
+ 200 OK          -----------            Success         -----------       Server successfully processed the request, returns data.
+ 201 Created     -----------      Resource Created       The request created a new resource. Usually returned with a Location header.
+ 202 Accepted   -----------   Accepted   ----------- Request is accepted for processing but not completed. Often used in async operations.
+ 204 No Content ----------- Success, No Data ----------- Request succeeded, but no content is returned (e.g., empty response body).
+ 400 Bad Request     ----------- Client Error  ----------- Malformed request or validation error. Often due to missing/invalid fields.
+ 401 Unauthorized     -----------       Auth Error    ----------- Authentication is required or failed. Usually due to missing/invalid token.
+ 403 Forbidden      -----------         Access Denied     -----------     The client is authenticated but not allowed to access the resource.
+ 404 Not Found       -----------        Resource Missing    -----------   The endpoint or resource does not exist.
+ 409 Conflict   -----------   Duplicate or Conflict ----------- The request could not be completed due to a conflict (e.g., duplicate entry).
+ 415 Unsupported Media Type -----------  Content-Type Error  -----------   Usually occurs when the Content-Type header is missing or incorrect.
+ 500 Internal Server Error -----------  Server Error     -----------      A generic error message from the server. Not caused by the client.
+ 503 Service Unavailable   -----------  Server Unavailable  -----------   Server is overloaded or down for maintenance.
+
+
+POST https://reqres.in/api/users
+Body (raw / JSON):
+
+{
+    "id": 7,
+    "email": "tracey.ramos@reqres.in",
+    "first_name": "Srikanth",
+    "last_name": "1234",
+    "avatar": "https://reqres.in/img/faces/6-image.jpg",
+    "createdAt": "2025-07-13T04:30:41.189Z"
+}
+
+Expected Response:
+
+* 201 Created with the new user data.
+

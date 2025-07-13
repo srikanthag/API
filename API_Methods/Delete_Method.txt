@@ -1,0 +1,28 @@
+The DELETE method in Postman is used to remove a resource from the server. It sends a request to a specific endpoint to delete the identified resource.
+
+Key Characteristics:
+
+* DELETE is idempotent: repeating the same request typically has the same effect as the first (deleting the same resource again has no further impact).
+* It usually doesn’t require a body, but some APIs might accept one.
+
+Common Response Codes:
+
+* 200 OK – The resource was successfully deleted and may return a confirmation message or resource metadata.
+* 202 Accepted – The deletion request has been accepted but is being processed asynchronously.
+* 204 No Content – The resource was successfully deleted, and there is no content to return.
+* 400 Bad Request – The request is malformed or missing required parameters.
+* 401 Unauthorized / 403 Forbidden – Authentication or permission issues.
+* 404 Not Found – The resource to be deleted does not exist.
+* 409 Conflict – The resource could not be deleted due to a conflict (e.g., dependencies or constraints).
+
+Using DELETE in Postman:
+
+1. Choose the DELETE method from the dropdown.
+2. Enter the API endpoint URL (often includes a resource ID, e.g., `/users/123`).
+3. Add any required headers (e.g., `Authorization`).
+4. (Optional) Add a body if the API expects it.
+
+Let me know if you’d like a sample DELETE request or to test one with a mock API.
+
+
+DELETE https://reqres.in/api/users/7

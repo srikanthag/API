@@ -1,0 +1,44 @@
+
+GET Method in Postman:
+
+TheGET method is used in Postman toretrieve data from a server without modifying any resource. It’s one of the most common HTTP methods used in API testing.
+
+Using GET in Postman:
+
+1. Open Postman.
+2. ChooseGET from the dropdown.
+3. Enter theAPI endpoint URL.
+4. Add query parameters (optional) in theParams tab.
+5. ClickSend to make the request.
+6. View the response body,status code, and headers.
+
+
+
+✅Common HTTP Response Codes for GET Requests
+
+Status Code               Meaning  Description                                                        
+ 
+200 OK      -----------         Success        -----------      The request was successful and the server returned the requested data. 
+204 No Content     -----------   Success      -----------    The request was successful but there is no content to return.          
+400 Bad Request     -----------       Client Error  -----------    The server couldn't understand the request due to invalid syntax.      
+401 Unauthorized   -----------        Client Error -----------    Authentication is required or has failed.                              
+403 Forbidden         -----------     Client Error ----------- The client doesn’t have permission to access the resource.             
+404 Not Found         -----------     Client Error-----------  The requested resource could not be found on the server.               
+500 Internal Server Error ----------- Server Error ----------- The server encountered an error and couldn’t process the request.      
+502 Bad Gateway     -----------       Server Error ----------- Received an invalid response from an upstream server.                  
+503 Service Unavailable   ----------- Server Error ----------- The server is temporarily unavailable (overloaded or down).            
+
+
+
+🧪 Example GET Request in Postman:
+
+GET https://reqres.in/api/users?page=2
+
+
+Query Param: page=2
+*Expected Response: 200 OK with a JSON list of books.
+
+
+✅ Summary:
+
+TheGET method in Postman is essential for reading data via APIs. Understanding the response codes helps identify the success or failure of a request and troubleshoot issues effectively.

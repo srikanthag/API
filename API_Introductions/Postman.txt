@@ -1,0 +1,55 @@
+Postman : Manual API testing
+RestAssure: Automation testing
+
+Postman
+Workspace: Used to maintain files/script
+Create new workspace >>>
+Create collections (Contains no of folders and http requits) >>>
+
+
+
+Parameters (Params)
+In Postman, parameters allow you to pass data to an API request. There are several types of parameters you can use depending on the request method and API design.
+
+
+1. Query Parameters
+Appended to the URL after a ?.
+Used to filter or sort data in GET requests.
+
+Format: key=value
+
+Example URL:
+https://api.example.com/users?age=25&gender=male
+
+Go to the Params tab.
+Add key-value pairs.
+Postman will auto-append them to the URL
+
+
+2.  Header Parameters
+Sent in the headers of the request.
+Used for things like authentication, content type, and custom headers.
+
+Example:
+Authorization: Bearer <token>
+Content-Type: application/json
+
+
+3. Body Parameters
+Used in POST, PUT, and PATCH requests.
+Carries data to be stored or updated.
+In Postman >> Go to the Body tab.
+
+Choose raw or form-data or x-www-form-urlencoded depending on API needs.
+
+Example raw JSON:
+
+json
+Copy
+Edit
+{
+  "name": "John",
+  "email": "john@example.com"
+}
+
+

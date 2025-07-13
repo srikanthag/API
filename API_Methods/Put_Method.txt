@@ -1,0 +1,40 @@
+The PUT method in Postman is used to update or replace an existing resource on the server. It sends data to a specific endpoint, typically along with a request body (usually in JSON format), to update the resource.
+
+Key Characteristics:
+
+* PUT is idempotent: making the same request multiple times results in the same state on the server.
+* Commonly used to update existing records.
+
+Common Response Codes:
+
+* 200 OK – The request was successful, and the resource was updated.
+* 201 Created – Sometimes used if the resource is created as a result of the PUT request (though usually POST is preferred for creation).
+* 204 No Content – The update was successful, but there's no content in the response.
+* 400 Bad Request – The request is malformed or invalid.
+* 401 Unauthorized / 403 Forbidden – Authentication/authorization issues.
+* 404 Not Found – The resource to update does not exist.
+* 409 Conflict – Conflict in resource state (e.g., concurrent updates).
+
+Use Postman to test PUT methods by:
+
+1. Selecting the PUT method.
+2. Entering the endpoint URL.
+3. Adding required headers (e.g., `Content-Type: application/json`).
+4. In the Body tab, selecting raw and entering the JSON data.
+
+Let me know if you’d like a real example.
+
+PUT  https://reqres.in/api/users/7
+Body (raw / JSON):
+
+{
+    "id": 7,
+    "email": "tracey.ramos@reqres.in",
+    "first_name": "SrikanthAG",
+    "last_name": "1234",
+    "avatar": "https://reqres.in/img/faces/6-image.jpg",
+    "updatedAt": "2025-07-13T04:32:59.737Z"
+}
+Expected Response:
+
+* 201 Created with the new user data.

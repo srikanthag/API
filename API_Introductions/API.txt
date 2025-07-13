@@ -1,7 +1,14 @@
+API Testing: API testing is a type of software testing that analyzes an application program interface (API) to verify it fulfills its expected functionality, security, performance and reliability
+
+
+
+===============================================
+
 Postman : Manual API testing
 RestAssure: Automation testing
 
-Postman
+********* POSTMAN ******************
+
 Workspace: Used to maintain files/script
 Create new workspace >>>
 Create collections (Contains no of folders and http requits) >>>
@@ -23,50 +30,45 @@ respond body
 cookies
 headers
 
-================================================================================================================
-
 POST === https://reqres.in/api/users
 select 'body' option then 'raw' option >>> select Json text
 
-Requist:
+Request:
 {
     "Neme": "DOn",
     "Job": "Trainee"
 }
 
-Got responce === 201 Created
+Got response === 201 Created
 
 {
-    "Neme": "DOn",
+    "Name": "DOn",
     "Job": "Trainee",
     "id": "738",
     "createdAt": "2023-01-14T16:46:25.593Z"
 }
 
-=================================================================================================================
 
 PUT === https://reqres.in/api/users/738 === 738 is id respond from Post
 select 'body' otion then 'raw' option >>> select Json text
 send text ===
-Requist:
+Request:
 {
-    "Neme": "Boss",
+    "Name": "Boss",
     "Job": "Trainee"
 }
 
-Got responce === 200 OK
+Got response === 200 OK
 {
-    "Neme": "Boss",
+    "Name": "Boss",
     "Job": "Trainee",
     "updatedAt": "2023-01-14T16:51:06.608Z"
 }
 
-=================================================================================================================
-
 DELETE === https://reqres.in/api/users/738
 Click send
 
-Got responce == 204 No Content
+Got response == 204 No Content
 
 =========================================================
 
@@ -82,9 +84,7 @@ Needed software's
 >>> run cmd "C:\Users\srikanth\Desktop\IT\API>json-server student.json"
 >>> http://localhost:3000/Student_Data
 
-
-
-=========================================
+===========================================================================================================
 API Response Validations (Adding tests)
 
 1. Status code
@@ -110,10 +110,10 @@ Please follow the below steps to write the HTTP Status code verification asserti
 
 5) Once the test is added, let’s try to execute this request again, and see the results of the test. Open the “Tests” tab in the response section and see the test/assertion validation message.
 
-==========
+=========================================================================================================
 TEST
 
-For expect single response
+For expect single responce
 
 pm.test("Status code is 200", function () {
 pm.response.to.have.status(200);
@@ -170,8 +170,7 @@ pm.expect(jsonData.Nmae).to.be.a("string");
 
 PRE-REQUEST SCRIPTS
 
-Pre-request scripts are logic or piece of code that are guaranteed to execute before the request execution begins.
-It allows for adding dynamic behavior to request execution.
+Pre-request scripts are logic or piece of code that are guaranteed to execute before the request execution begins. It allows for adding dynamic behavior to request execution.
 
 EX: add Data-Type01 header
 
@@ -184,14 +183,13 @@ value: 'appn/json'
 
 NEWMAN
 
-Export collections >> it will save as json format in respected folder >>> Run cmd in that folder
-Command: "newman run C:\Users\srikanth\Desktop\IT\API\Student_Data.postman_collection.json"
+Export collections >> it will save as json format in respected folder >>> Rum cmd in that folder
+Commanad: "newman run C:\Users\srikanth\Desktop\IT\API\Student_Data.postman_collection.json"
+
 
 ==============================================================================
 RESTASSURE
 
+
 =========Refference======
 https://www.softwaretestinghelp.com/api-testing-using-postman/
-
-
-
