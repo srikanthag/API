@@ -34,32 +34,3 @@ TC:001 Get Test Title and Status code from API
     ${hearde_value}     get from dictionary     ${response.headers}     Content-Type
     Should Be Equal     ${hearde_value}    application/json; charset=utf-8
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

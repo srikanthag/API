@@ -26,13 +26,3 @@ assert pages[0] == 2    # Asser will  compare
 # assert pages[0] == 5    # user will get  assertion error
 
 
-
-
-
-
-
-
-
-
-
-

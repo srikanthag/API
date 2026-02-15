@@ -30,20 +30,6 @@ API protocols are standardized rules that define how data is communicated betwee
 * GraphQL: Flexible queries, fetches exactly what is needed.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Rest API:
 A REST (Representational State Transfer)  API (also known as RESTful API) is an application programming interface (API or web API) that conforms to the constraints of REST architectural style and allows for interaction with RESTful web services.
 
